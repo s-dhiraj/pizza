@@ -6,7 +6,7 @@ const connection=mongoose.connect(process.env.MONGODB_URI || "mongodb://localhos
     useCreateIndex:true,
 
     }).then(()=> console.log("connection successful...."))
-    .catch(()=> console.log("connection unsucessful.........."))
+    .catch((err)=> console.log("connection unsucessful..........+err"))
 
   require("./models/menu");
 
