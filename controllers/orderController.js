@@ -32,18 +32,26 @@ function orderController(){
         })
         },
         async index(req,res){
-           const orders=await Order.find({customerId:req.user._id},null,{sort:{'createdAt':-1}});
-           res.render('order',{orders:orders,moment:moment});
-
+           try{
+            const orders=await Order.find({customerId:req.user._id},null,{sort:{'createdAt':-1}});
+            res.render('order',{orders:orders,moment:moment});
+           }
+          catch(err){
+            return  res.redirect('/')
+          }
         },
 
         async show(req, res) {
+           try{
             const order = await Order.findById(req.params.id)
             // Authorize user
             if(req.user._id.toString() === order.customerId.toString()) {
                 return res.render('singleOrder', { order })
             }
-            return  res.redirect('/')
+           }
+            catch(err){
+                return  res.redirect('/')
+            }
         }
     }
 }
