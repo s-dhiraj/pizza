@@ -1,5 +1,5 @@
 const mongoose=require('mongoose');
-const connection=mongoose.connect(process.env.MONGO_CONNECTION,{
+const connection=mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/pizza",{
     useNewUrlParser: true, 
         
     useUnifiedTopology: true,
