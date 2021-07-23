@@ -41,7 +41,12 @@ body {
      border-radius: 38%;
      padding: 0 1rem;
  }
-
+ .cart-s{
+     background-color: #FE5F1E;
+     width: fit-content;
+     border-radius: 40%;
+     padding: 0.1rem 0.1rem;
+ }
    /* ***********  main section ******   */
 
    .main-sec{
@@ -339,6 +344,10 @@ body {
       border-color: var(--primary);
   }
 
+  .navbar-toggler{
+  background-color: #f5dfd5!important;
+  border: 3.5px solid var(--primary)!important;
+}
 
 
 

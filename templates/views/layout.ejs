@@ -52,11 +52,13 @@
                                 
                             </li>
                         <% } %>
-                        <li class="nav-item cart">
-                            <a class="nav-link" href="/cart">
-                                <span class="cart-number">
-                                    <%= session.cart ? session.cart.totalQty : '' %>
-                                </span> <img src="../img/cart.png" class="img-fluid" alt=""></a>
+                        <li class="nav-item">
+                            <div class="d-flex justify-content-start cart-s" >
+                                <a class="nav-link" href="/cart">
+                                    <span class="cart-number">
+                                        <%= session.cart ? session.cart.totalQty : '' %>
+                                    </span> <img src="../img/cart.png" class="img-fluid" alt=""></a>
+                            </div>
                         </li>
                      
                     </ul>
