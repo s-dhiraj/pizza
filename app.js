@@ -65,7 +65,7 @@ app.use((req, res, next) => {
 
 require('./routes/web')(app);
 
-const server=app.listen(process.env.port,()=>{
+const server=app.listen(PORT,()=>{
     console.log(`listening on port ${PORT}`);
 })
 
